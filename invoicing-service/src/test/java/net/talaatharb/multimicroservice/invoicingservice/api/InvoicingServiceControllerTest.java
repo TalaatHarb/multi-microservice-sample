@@ -1,4 +1,4 @@
-package net.talaatharb.multimicroservice.identityservice.api;
+package net.talaatharb.multimicroservice.invoicingservice.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -14,26 +14,14 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.web.bind.annotation.RestController;
 
-import net.talaatharb.multimicroservice.invoicingservice.api.InvoicingServiceApi;
-import net.talaatharb.multimicroservice.invoicingservice.dto.GetDocumentTypesResult;
 import net.talaatharb.multimicroservice.invoicingservice.dto.InvoicingServiceConstants;
-
-@RestController
-class InvoicingServiceApiControllerMock implements InvoicingServiceApi {
-
-	@Override
-	public GetDocumentTypesResult getDocumentTypes() {
-		return new GetDocumentTypesResult();
-	}
-
-}
+import net.talaatharb.multimicroservice.invoicingservice.service.InvoicingServiceImpl;
 
 @AutoConfigureMockMvc
-@ContextConfiguration(classes = { InvoicingServiceApiControllerMock.class })
+@ContextConfiguration(classes = { InvoicingServiceController.class, InvoicingServiceImpl.class })
 @WebMvcTest
-class InvoicingServiceApiTest {
+class InvoicingServiceControllerTest {
 
 	private static final String FAKE_TOKEN = "Bearer eyJ0b2tlbl9pbmZvIjoiZmFrZSJ9";
 
@@ -41,7 +29,7 @@ class InvoicingServiceApiTest {
 	private MockMvc mockMvc;
 
 	@Test
-	void testGetToken() throws Exception {
+	void testGetDocumentTypes() throws Exception {
 		// Arrange
 		final String autorizationHeader = FAKE_TOKEN;
 

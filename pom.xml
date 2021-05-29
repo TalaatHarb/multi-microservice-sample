@@ -56,5 +56,6 @@
 		<module>identity-service-api</module>
 		<module>identity-service</module>
 		<module>invoicing-service-api</module>
+		<module>invoicing-service</module>
 	</modules>
 </project>

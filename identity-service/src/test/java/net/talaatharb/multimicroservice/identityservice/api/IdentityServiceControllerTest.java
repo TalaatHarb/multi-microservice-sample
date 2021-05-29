@@ -24,7 +24,7 @@ import net.talaatharb.multimicroservice.identityservice.service.IdentityServiceI
 @AutoConfigureMockMvc
 @ContextConfiguration(classes = { IdentityServiceController.class, IdentityServiceImpl.class })
 @WebMvcTest
-class IdentityServiceApiTest {
+class IdentityServiceControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
