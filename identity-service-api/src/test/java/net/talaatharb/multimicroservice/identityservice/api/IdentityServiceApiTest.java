@@ -20,6 +20,7 @@ import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.talaatharb.multimicroservice.commons.messages.IdentityServiceMessages;
 import net.talaatharb.multimicroservice.identityservice.dto.IdentityServiceConstants;
 import net.talaatharb.multimicroservice.identityservice.dto.TokenDto;
 import net.talaatharb.multimicroservice.identityservice.dto.TokenRequestDto;
@@ -30,9 +31,10 @@ class IdentityServiceApiControllerMock implements IdentityServiceApi {
 
 	@Override
 	public TokenDto getToken(TokenRequestDto tokenRequestDto, String onBehalfOfHeader, String authorizationHeader) {
-		Assert.state(!("".equals(tokenRequestDto.getClient_id())), "Invalid client_id");
-		Assert.state(!("".equals(tokenRequestDto.getClient_secret())), "Invalid client_secret");
-		Assert.state(!("".equals(tokenRequestDto.getGrant_type())), "Invalid grant_type");
+		Assert.state(!("".equals(tokenRequestDto.getClient_id())), IdentityServiceMessages.INVALID_CLIENT_ID_MESSAGE);
+		Assert.state(!("".equals(tokenRequestDto.getClient_secret())),
+				IdentityServiceMessages.INVALID_CLIENT_SECRET_MESSAGE);
+		Assert.state(!("".equals(tokenRequestDto.getGrant_type())), IdentityServiceMessages.INVALID_GRANT_TYPE_MESSAGE);
 
 		return new TokenDto();
 	}

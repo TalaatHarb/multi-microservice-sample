@@ -52,6 +52,7 @@
 	</build>
 
 	<modules>
+		<module>multi-microsservice-commons</module>
 		<module>identity-service-api</module>
 		<module>identity-service</module>
 	</modules>
