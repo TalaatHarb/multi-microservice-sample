@@ -53,5 +53,6 @@
 
 	<modules>
 		<module>identity-service-api</module>
+		<module>identity-service</module>
 	</modules>
 </project>
