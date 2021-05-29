@@ -1,42 +1,36 @@
 package net.talaatharb.multimicroservice.identityservice.dto;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-
 import lombok.Data;
 
 @Data
-@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class TokenRequestDto {
 
 	/**
 	 * Default grant type for OAuth2 usage and the client credentials flow
 	 */
-	public static final String DEFAULT_GRANT_TYPE = "client_credentials";
+	private static final String DEFAULT_GRANT_TYPE = "client_credentials";
 
 	/**
-	 * Some default scope
+	 * Client Id for client credentials flow, should be mapped to 'client_id'
+	 * property
 	 */
-	public static final String DEFAULT_SCOPE = "InvoicingAPI";
+	private String client_id = "";
 
 	/**
-	 * Client Id for client credentials flow, should be mapped to 'client_id' property
+	 * Client secret for client credentials flow, should be mapped to
+	 * 'client_secret' property
 	 */
-	private String clientId = "";
-
-	/**
-	 * Client secret for client credentials flow, should be mapped to 'client_secret' property
-	 */
-	private String clientSecret = "";
+	private String client_secret = "";
 
 	/**
 	 * Grant type and its default value is to set client credentials flow
 	 */
-	private String grantType = DEFAULT_GRANT_TYPE;
+	private String grant_type = DEFAULT_GRANT_TYPE;
 
 	/**
-	 * The scope of the token request
+	 * The scope of the token request, Optional parameter asking for a specific
+	 * access scope
 	 */
-	private String scope = DEFAULT_SCOPE;
+	private String scope = IdentityServiceConstants.DEFAULT_SCOPE;
 
 }
