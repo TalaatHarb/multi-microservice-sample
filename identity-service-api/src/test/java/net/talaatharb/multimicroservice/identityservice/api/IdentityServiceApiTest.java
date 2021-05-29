@@ -17,7 +17,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.util.Assert;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.talaatharb.multimicroservice.commons.messages.IdentityServiceMessages;
@@ -26,7 +25,6 @@ import net.talaatharb.multimicroservice.identityservice.dto.TokenDto;
 import net.talaatharb.multimicroservice.identityservice.dto.TokenRequestDto;
 
 @RestController
-@RequestMapping(IdentityServiceConstants.DEFAULT_URL_FOR_TOKEN)
 class IdentityServiceApiControllerMock implements IdentityServiceApi {
 
 	@Override

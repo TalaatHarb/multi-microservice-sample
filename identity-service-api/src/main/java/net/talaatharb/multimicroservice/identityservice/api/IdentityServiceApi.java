@@ -18,7 +18,7 @@ public interface IdentityServiceApi {
 	 *                        'application/x-www-form-urlencoded' object
 	 * @return Token object
 	 */
-	@PostMapping(path = "", consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@PostMapping(path = IdentityServiceConstants.DEFAULT_URL_FOR_TOKEN, consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = {MediaType.APPLICATION_JSON_VALUE})
 	public abstract TokenDto getToken(@ModelAttribute TokenRequestDto tokenRequestDto,
 			@RequestHeader(name = IdentityServiceConstants.ON_BEHALF_OF_HEADER, required = false) String onBehalfOfHeader,
 			@RequestHeader(name = IdentityServiceConstants.AUTHORIZATION_HEADER, required = false) String authorizationHeader);

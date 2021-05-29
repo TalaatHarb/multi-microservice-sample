@@ -1,17 +1,14 @@
 package net.talaatharb.multimicroservice.identityservice.api;
 
 import org.springframework.util.Assert;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.talaatharb.multimicroservice.commons.messages.IdentityServiceMessages;
-import net.talaatharb.multimicroservice.identityservice.dto.IdentityServiceConstants;
 import net.talaatharb.multimicroservice.identityservice.dto.TokenDto;
 import net.talaatharb.multimicroservice.identityservice.dto.TokenRequestDto;
 import net.talaatharb.multimicroservice.identityservice.service.IdentityService;
 
 @RestController
-@RequestMapping(IdentityServiceConstants.DEFAULT_URL_FOR_TOKEN)
 public class IdentityServiceController implements IdentityServiceApi {
 
 	private final IdentityService identityService;
