@@ -12,3 +12,15 @@ invoicing-service-api:
   port: 8082
   scheme: http
   url: ${invoicing-service-api.scheme}://${invoicing-service-api.host}:${invoicing-service-api.port}
+
+logging:
+  level:
+    net.talaatharb.multimicroservice.backend.service.external: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
