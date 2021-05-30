@@ -1,6 +1,7 @@
 package net.talaatharb.multimicroservice.invoicingservice.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import net.talaatharb.multimicroservice.invoicingservice.dto.GetDocumentTypesResult;
 import net.talaatharb.multimicroservice.invoicingservice.dto.InvoicingServiceConstants;
@@ -16,6 +17,7 @@ public interface InvoicingServiceApi {
 	 *         includes list of DocumentType elements
 	 */
 	@GetMapping(path = InvoicingServiceConstants.DEFAULT_URL_FOR_GET_DOCUMENT_TYPES)
-	public abstract GetDocumentTypesResult getDocumentTypes();
+	public abstract GetDocumentTypesResult getDocumentTypes(
+			@RequestHeader(name = InvoicingServiceConstants.AUTHORIZATION_HEADER, required = true) String authorizationHeader);
 
 }

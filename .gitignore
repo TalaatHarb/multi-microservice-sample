@@ -9,7 +9,8 @@
 
 # Eclipse
 .project
-.settings
+.settings/
+*/.factorypath
 
 # Maven target folder
 target/

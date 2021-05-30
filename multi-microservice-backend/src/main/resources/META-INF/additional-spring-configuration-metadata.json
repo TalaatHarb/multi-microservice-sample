@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "identity-service-api.host",
+    "type": "java.lang.String",
+    "description": "host for identity-service"
+  },
+  {
+    "name": "identity-service-api.port",
+    "type": "java.lang.Integer",
+    "description": "Port for identity-service"
+  },
+  {
+    "name": "identity-service-api.url",
+    "type": "java.lang.String",
+    "description": "Url for identity-service"
+  },
+  {
+    "name": "invoicing-service-api.host",
+    "type": "java.lang.String",
+    "description": "host for invoicing-service"
+  },
+  {
+    "name": "invoicing-service-api.port",
+    "type": "java.lang.Integer",
+    "description": "Port for invoicing-service"
+  },
+  {
+    "name": "invoicing-service-api.url",
+    "type": "java.lang.String",
+    "description": "Url for invoicing-service"
+  },
+  {
+    "name": "identity-service-api.scheme",
+    "type": "java.lang.String",
+    "description": "Scheme of connection for identity-service http/https"
+  },
+  {
+    "name": "invoicing-service-api.scheme",
+    "type": "java.lang.String",
+    "description": "Scheme of connection for invoicing-service http/https"
+  }
+]}

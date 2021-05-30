@@ -15,7 +15,7 @@ public class InvoicingServiceController implements InvoicingServiceApi {
 	}
 
 	@Override
-	public GetDocumentTypesResult getDocumentTypes() {
+	public GetDocumentTypesResult getDocumentTypes(String authorizationHeader) {
 		return invoicingService.getDocumentTypes();
 	}
 

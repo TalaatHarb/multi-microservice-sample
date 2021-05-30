@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+identity-service-api:
+  host: localhost
+  port: 8081
+  scheme: http
+  url: ${identity-service-api.scheme}://${identity-service-api.host}:${identity-service-api.port}
+  
+invoicing-service-api:
+  host: localhost
+  port: 8082
+  scheme: http
+  url: ${invoicing-service-api.scheme}://${invoicing-service-api.host}:${invoicing-service-api.port}
