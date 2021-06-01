@@ -1,4 +1,4 @@
-package net.talaatharb.multimicroservice.invoicingservice;
+package net.talaatharb.multimicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

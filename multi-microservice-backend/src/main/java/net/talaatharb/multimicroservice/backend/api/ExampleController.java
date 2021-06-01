@@ -5,16 +5,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.talaatharb.multimicroservice.backend.service.external.IdentityExternalService;
 import net.talaatharb.multimicroservice.backend.service.external.InvoicingExternalService;
 import net.talaatharb.multimicroservice.invoicingservice.dto.GetDocumentTypesResult;
 
 @RestController
 @CrossOrigin
 public class ExampleController {
-
-	@Autowired
-	private IdentityExternalService identityExternalService;
 
 	@Autowired
 	private InvoicingExternalService invoicingExternalService;
